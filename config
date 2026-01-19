@@ -52,8 +52,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
-bindsym $mod+x kill
+bindsym $mod+Shift+x kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -200,11 +199,12 @@ for_window [class="CyberSafeTeams"] title_format "CyberSafe Teams"; border pixel
 bindsym $mod+Shift+y exec --no-startup-id /opt/google/chrome/google-chrome --profile-directory=Default --app=https://teams.microsoft.com/v2/ --user-data-dir=~/.config/google-chrome-2 --class=MaxxTeams
 for_window [class="MaxxTeams"] title_format "Maxx Teams"; border pixel 3
 bindsym $mod+Shift+o exec /opt/google/chrome/google-chrome --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn
-bindsym $mod+Shift+p exec --no-startup-id google-chrome --app=https://cybermaxx.atlassian.net/browse --user-data-dir=~/.config/google-chrome-2 --class=MaxxJira
+#bindsym $mod+Shift+j exec --no-startup-id google-chrome --app=https://cybermaxx.atlassian.net/browse --user-data-dir=~/.config/google-chrome-2 --class=MaxxJira
 for_window [class="MaxxJira"] title_format "Maxx Jira"; border pixel 3
 
 # Screenshots
 bindsym $mod+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+p exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 bindsym $mod+p exec xfce4-terminal --working-directory='/tmp' -x 'ipython'
 # multi-monitor control
 exec --no-startup-id xrandr --output DP-7 --primary --output DP-0 --right-of DP-7
